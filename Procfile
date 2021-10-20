@@ -1,1 +1,1 @@
-worker: python neotomabot.py
+worker: python3 neotomabot.py

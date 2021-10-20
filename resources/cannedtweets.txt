@@ -1,0 +1,18 @@
+The bot for the Neotoma Database is programmed in #python and publicly available through an MIT License on GitHub: https://github.com/NeotomaDB/neotomabot
+Neotoma has teaching modules you can use in the classroom, check it out: https://www.neotomadb.org/education/category/higher_ed/
+Governance for Neotoma includes representatives from our 34 constituent databases. Find out more: https://www.neotomadb.org/about/category/governance
+We are invested in #cyberinfrastructure. Our response to emerging challenges is posted on @authorea: https://www.authorea.com/users/152134/articles/165940-cyberinfrastructure-in-the-paleosciences-mobilizing-long-tail-data-building-distributed-community-infrastructure-empowering-individual-geoscientists
+There's a big @zotero library of Neotoma publications that we've been working on.  Check it out here: https://www.zotero.org/groups/2321378/neotomadb
+Neotoma is more than just pollen & mammals; it contains 28 data types incl phytoliths & biochemistry data. Explore! https://apps.neotomadb.org/explorer
+Think you've got better tweets? Add them to my code & make a pull request! https://github.com/NeotomaDB/neotomabot
+Behold, the very first Neotoma dataset, ID 1: https://apps.neotomadb.org/explorer/?datasetid=1
+Our site at https://open.neotomadb.org hosts all our #openscience work, including a link to the database schema.  Check it out!
+Neotoma is a member of the @ICSU_WDS, working to share best practices for data stewardship.
+Are you presenting at an upcoming meeting?  Will you be talking about Neotoma?  Let us know and we can help get the word out! Contact @sjgoring
+You know you want to slide into these mentions. . . Let us know what cool #pollen, #paleoecology, #archaeology, #whatever you're doing with Neotoma data!
+Referencing Neotoma?  Why not check out our Quaternary Research paper? https://doi.org/10.1017/qua.2017.105
+How is Neotoma leveraging text mining to improve its data holdings? We've been working with @geodeepdive to discover articles that have yet to be submitted to the database. @earthcube
+Building an application that could leverage Neotoma data?  Our API (https://api.neotomadb.org) is public and open: https://github.com/NeotomaDB/api_nodetest/ #openscience
+The landing pages for Neotoma were built using Vue.js, all code is published on Github at https://github.com/NeotomaDB/ndbLandingPage Check them out here: https://data.neotomadb.org
+Learn more about how Neotoma makes the most of teaching and cutting-edge research in our Elements of Paleontology publication: http://dx.doi.org/10.1017/9781108681582
+Neotoma is on Slack. Come join the discussion and get involved! We're looking for folks to help with documentation, stewardship and coding. https://join.slack.com/t/neotomadb/shared_invite/zt-cvsv53ep-wjGeCTkq7IhP6eUNA9NxYQ

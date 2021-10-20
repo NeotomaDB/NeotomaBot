@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 #!python3
-""" Neotoma Database Twitter Manager v2.0
+""" Neotoma Database Twitter Manager
     by: Simon Goring
     This Twitter bot is intended to provide updated information to individuals about additions to the Neotoma
     Paleoecology database.  The script leverages the `schedule` package for Python, running continually in 
@@ -33,7 +33,7 @@ def randomtweet(api):
         The tweets are all present in the file `resources/cannedtweets.txt`.  These can be edited
         directly on GitHub if anyone chooses to.
     """
-    with open('resources/cannedtweets.txt', 'r') as f:
+    with open('../resources/cannedtweets.txt', 'r') as f:
         alltweets = f.read().splitlines()
         line = random.choice(alltweets)
         api.request('statuses/update', {'status':line})
