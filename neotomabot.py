@@ -77,7 +77,6 @@ twitterup(api)
 schedule.every(6).hours.do(recentsite, api)
 schedule.every(5).hours.do(randomtweet, api)
 schedule.every().monday.at("14:30").do(self_identify_hub, api)
-schedule.every().day.at("10:30").do(other_inf_hub, api)
 
 while 1:
     schedule.run_pending()
