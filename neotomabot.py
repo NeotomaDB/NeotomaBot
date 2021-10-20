@@ -28,6 +28,10 @@ api = TwitterAPI(consumer_key=twitstuff['consumer_key'],
                  access_token_key=twitstuff['access_token_key'], 
                  access_token_secret=twitstuff['access_token_secret'])
 
+def twitterup(api):
+  line = "Someone just restarted me by pushing to GitHub.  This means I've been updated, yay!"
+  api.request('statuses/update', {'status':line})
+
 def randomtweet(api):
     """ Tweet a random statement from a plain text document. Passing in the twitter API object.
         The tweets are all present in the file `resources/cannedtweets.txt`.  These can be edited
@@ -68,6 +72,7 @@ def self_identify_hub(api):
   line = 'This twitter bot for the Neotoma Paleoecological Database is programmed in #python and publicly available through an MIT License on GitHub: https://github.com/NeotomaDB/neotomabot'
   api.request('statuses/update', {'status':line})
 
+twitterup(api)
 
 schedule.every(6).hours.do(recentsite, api)
 schedule.every(5).hours.do(randomtweet, api)
