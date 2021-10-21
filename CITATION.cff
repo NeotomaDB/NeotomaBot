@@ -7,4 +7,5 @@ authors:
 title: "Neotoma Twitter Bot"
 version: 2.0
 date-released: 2021-10-20
+doi: 10.5281/zenodo.5587213
 url: "https://github.com/NeotomaDB/NeotomaBot"

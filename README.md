@@ -1,6 +1,7 @@
 # NeotomaBot
 
 [![Lifecycle:Stable](https://img.shields.io/badge/Lifecycle-Stable-97ca00)](https://neotomadb.org)
+[![DOI](https://zenodo.org/badge/417625973.svg)](https://zenodo.org/badge/latestdoi/417625973)
 [![NSF-1948926](https://img.shields.io/badge/NSF-1948926-blue.svg)](https://nsf.gov/awardsearch/showAward?AWD_ID=1948926)
 
 A twitter bot to search for new records in the [Neotoma Paleoecology Database](http://neotomadb.org) and then post them to the [@neotomadb](http://twitter.com/neotomadb) Twitter account.
