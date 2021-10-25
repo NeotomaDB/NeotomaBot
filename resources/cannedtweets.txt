@@ -1,6 +1,10 @@
 The bot for the Neotoma Database is programmed in #python and publicly available through an MIT License on GitHub: https://github.com/NeotomaDB/neotomabot
+We've been working with the @EuPolDB to update records and get new data in.  Looking forward to lots more #openscience! http://www.europeanpollendatabase.net/index.php
+Such amazing work from our partners at the Latin American Pollen Database! Glad to have more records from this important region https://www.latinamericapollendb.com/
 Neotoma has teaching modules you can use in the classroom, check it out: https://www.neotomadb.org/education/category/higher_ed/
 Governance for Neotoma includes representatives from our 34 constituent databases. Find out more: https://www.neotomadb.org/about/category/governance
+Collaboration with @carletonserc led to the development of a number of #paleoecology instruction modules from high school to upper college courses: https://serc.carleton.edu/neotoma/activities.html
+Honestly, there's so much to be done with Neotoma, let us know if you're looking for a project to work on.  We'd be happy to help!
 We are invested in #cyberinfrastructure. Our response to emerging challenges is posted on @authorea: https://www.authorea.com/users/152134/articles/165940-cyberinfrastructure-in-the-paleosciences-mobilizing-long-tail-data-building-distributed-community-infrastructure-empowering-individual-geoscientists
 There's a big @zotero library of Neotoma publications that we've been working on.  Check it out here: https://www.zotero.org/groups/2321378/neotomadb
 Neotoma is more than just pollen & mammals; it contains 28 data types incl phytoliths & biochemistry data. Explore! https://apps.neotomadb.org/explorer
@@ -16,3 +20,5 @@ Building an application that could leverage Neotoma data?  Our API (https://api.
 The landing pages for Neotoma were built using Vue.js, all code is published on Github at https://github.com/NeotomaDB/ndbLandingPage Check them out here: https://data.neotomadb.org
 Learn more about how Neotoma makes the most of teaching and cutting-edge research in our Elements of Paleontology publication: http://dx.doi.org/10.1017/9781108681582
 Neotoma is on Slack. Come join the discussion and get involved! We're looking for folks to help with documentation, stewardship and coding. https://join.slack.com/t/neotomadb/shared_invite/zt-cvsv53ep-wjGeCTkq7IhP6eUNA9NxYQ
+Neotoma is at the center of research, engagement and outreach.  Find out more in our Elements of Paleontology article: https://doi.org/10.1017/9781108681582
+Do you like Diatoms? We're working with @AcadNatSci to get more diatom and water chemistry data into Neotoma.  Look how pretty these things are! https://artsandculture.google.com/exhibit/diatoms-of-the-academy-of-natural-sciences-of-drexel-university-academy-of-natural-sciences-of-drexel-university/7QKi7EaVlShRLw?hl=en
