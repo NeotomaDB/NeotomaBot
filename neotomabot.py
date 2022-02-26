@@ -10,6 +10,8 @@
 
 from TwitterAPI import TwitterAPI
 import random
+import requests
+import json
 import xmltodict
 import urllib.request
 import schedule
@@ -56,26 +58,39 @@ def recentsite(api):
         tweet = random.choice(records)['record']
         while tweet['datasetid'] in datasets:
             tweet = random.choice(records)['record']
-        string = "It's a new {datasettype} dataset from the {databasename} at {sitename}! https://data.neotomadb.org/{datasetid}".format(**tweet)
+        string = "It's a new {datasettype} dataset from the {databasename} at {sitename} ({geo})! https://data.neotomadb.org/{datasetid}".format(**tweet)
         if len(string) < 280:
             api.request('statuses/update', {'status':string})
             datasets.add(tweet['datasetid'])
         else:
-            string = "It's a new dataset from the {databasename} at {sitename}! https://data.neotomadb.org/{datasetid}".format(**tweet)
+            string = "It's a new dataset from the {databasename} at {sitename} ({geo})! https://data.neotomadb.org/{datasetid}".format(**tweet)
             if len(string) < 280:
                 api.request('statuses/update', {'status':string})
                 datasets.add(tweet['datasetid'])
 
 
+def ukrsite(api):
+    """ Tweet one of the recent data uploads from Neotoma. Passing in the twitter API object.
+        This leverages the v1.5 API's XML response for recent uploads.  It selects one of the new uploads
+        (except geochronology uploads) and tweets it out.  It selects them randomly, and adds the selected 
+        dataset to a set object so that values cannot be repeatedly tweeted out.
+    """
+    with requests.get('https://api.neotomadb.org/v2.0/data/geopoliticalunits/5852/datasets?limit=9000') as response:
+        output = filter(lambda x: x["geopoliticalname"] == "Ukraine", json.loads(response.text)['data'])
+        records = list(map(lambda x: {'id': x['siteid'], 'name': x['sitename']}, list(output)[0]['sites']))
+    if len(records) > 0:
+        tweet = random.choice(records)
+        string = "{name} is a site in Neotoma from the Ukraine 🇺🇦 https://apps.neotomadb.org/?siteids={id}".format(**tweet)
+        api.request('statuses/update', {'status':string})
+        
 def self_identify_hub(api):
   """ Identify the codebase for the bot through a tweet. """
   line = 'This twitter bot for the Neotoma Paleoecological Database is programmed in #python and publicly available through an MIT License on GitHub: https://github.com/NeotomaDB/neotomabot'
   api.request('statuses/update', {'status':line})
 
-twitterup(api)
-
 schedule.every(6).hours.do(recentsite, api)
 schedule.every(5).hours.do(randomtweet, api)
+schedule.every(1).hours.do(ukrsite, api)
 schedule.every().monday.at("14:30").do(self_identify_hub, api)
 
 while 1:
