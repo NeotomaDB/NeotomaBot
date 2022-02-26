@@ -18,7 +18,7 @@ import schedule
 import time
 import os
 
-twitstuff = {'consumer_key':os.environ['consumer_key'], 
+twitstuff = {'consumer_key': os.environ['consumer_key'], 
              'consumer_secret': os.environ['consumer_secret'],
              'access_token_key':os.environ['access_token_key'],
              'access_token_secret':os.environ['access_token_secret']}
@@ -34,6 +34,7 @@ def twitterup(api):
   line = "Someone just restarted me by pushing to GitHub.  This means I've been updated, yay!"
   api.request('statuses/update', {'status':line})
 
+
 def randomtweet(api):
     """ Tweet a random statement from a plain text document. Passing in the twitter API object.
         The tweets are all present in the file `resources/cannedtweets.txt`.  These can be edited
@@ -43,7 +44,8 @@ def randomtweet(api):
         alltweets = f.read().splitlines()
         line = random.choice(alltweets)
         api.request('statuses/update', {'status':line})
-        
+
+
 def recentsite(api):
     """ Tweet one of the recent data uploads from Neotoma. Passing in the twitter API object.
         This leverages the v1.5 API's XML response for recent uploads.  It selects one of the new uploads
@@ -82,7 +84,8 @@ def ukrsite(api):
         tweet = random.choice(records)
         string = "{name} is a site in Neotoma from the Ukraine 🇺🇦 https://apps.neotomadb.org/?siteids={id}".format(**tweet)
         api.request('statuses/update', {'status':string})
-        
+
+
 def self_identify_hub(api):
   """ Identify the codebase for the bot through a tweet. """
   line = 'This twitter bot for the Neotoma Paleoecological Database is programmed in #python and publicly available through an MIT License on GitHub: https://github.com/NeotomaDB/neotomabot'
