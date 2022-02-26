@@ -58,6 +58,10 @@ def recentsite(api):
         records = list(filter(lambda x: x['record']['datasettype'] != 'geochronology' or x['record']['datasetid'] not in datasets, output))
     if len(records) > 0:
         tweet = random.choice(records)['record']
+        tweet['geo'] = tweet['geo'].split('|')[0].strip()
+        while tweet['geo'] == 'Russia':
+            tweet = random.choice(records)['record']
+            tweet['geo'] = tweet['geo'].split('|')[0].strip()
         while tweet['datasetid'] in datasets:
             tweet = random.choice(records)['record']
         string = "It's a new {datasettype} dataset from the {databasename} at {sitename} ({geo})! https://data.neotomadb.org/{datasetid}".format(**tweet)
@@ -90,6 +94,8 @@ def self_identify_hub(api):
   """ Identify the codebase for the bot through a tweet. """
   line = 'This twitter bot for the Neotoma Paleoecological Database is programmed in #python and publicly available through an MIT License on GitHub: https://github.com/NeotomaDB/neotomabot'
   api.request('statuses/update', {'status':line})
+
+ukrsite(api)
 
 schedule.every(6).hours.do(recentsite, api)
 schedule.every(5).hours.do(randomtweet, api)
