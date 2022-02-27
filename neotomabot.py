@@ -86,7 +86,7 @@ def ukrsite(api):
         records = list(map(lambda x: {'id': x['siteid'], 'name': x['sitename']}, list(output)[0]['sites']))
     if len(records) > 0:
         tweet = random.choice(records)
-        string = "{name} is a site in Neotoma from the Ukraine 🇺🇦 https://apps.neotomadb.org/explorer?siteids={id}".format(**tweet)
+        string = "{name} is a site in Neotoma from Ukraine 🇺🇦 https://apps.neotomadb.org/explorer?siteids={id}".format(**tweet)
         api.request('statuses/update', {'status':string})
 
 
@@ -97,7 +97,7 @@ def self_identify_hub(api):
 
 schedule.every(6).hours.do(recentsite, api)
 schedule.every(5).hours.do(randomtweet, api)
-schedule.every(1).hours.do(ukrsite, api)
+schedule.every(3).hours.do(ukrsite, api)
 schedule.every().monday.at("14:30").do(self_identify_hub, api)
 
 while 1:

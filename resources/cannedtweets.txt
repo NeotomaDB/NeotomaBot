@@ -22,3 +22,4 @@ Learn more about how Neotoma makes the most of teaching and cutting-edge researc
 Neotoma is on Slack. Come join the discussion and get involved! We're looking for folks to help with documentation, stewardship and coding. https://join.slack.com/t/neotomadb/shared_invite/zt-cvsv53ep-wjGeCTkq7IhP6eUNA9NxYQ
 Neotoma is at the center of research, engagement and outreach.  Find out more in our Elements of Paleontology article: https://doi.org/10.1017/9781108681582
 Do you like Diatoms? We're working with @AcadNatSci to get more diatom and water chemistry data into Neotoma.  Look how pretty these things are! https://artsandculture.google.com/exhibit/diatoms-of-the-academy-of-natural-sciences-of-drexel-university-academy-of-natural-sciences-of-drexel-university/7QKi7EaVlShRLw?hl=en
+The new Neotoma #rstats package is now in beta testing.  We're looking for folks to help out with development, testing and documentation.  Get involved! https://github.com/NeotomaDB/neotoma2
