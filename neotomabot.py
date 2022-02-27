@@ -86,7 +86,7 @@ def ukrsite(api):
         records = list(map(lambda x: {'id': x['siteid'], 'name': x['sitename']}, list(output)[0]['sites']))
     if len(records) > 0:
         tweet = random.choice(records)
-        string = "{name} is a site in Neotoma from the Ukraine 🇺🇦 https://apps.neotomadb.org/?siteids={id}".format(**tweet)
+        string = "{name} is a site in Neotoma from the Ukraine 🇺🇦 https://apps.neotomadb.org/explorer?siteids={id}".format(**tweet)
         api.request('statuses/update', {'status':string})
 
 
@@ -94,8 +94,6 @@ def self_identify_hub(api):
   """ Identify the codebase for the bot through a tweet. """
   line = 'This twitter bot for the Neotoma Paleoecological Database is programmed in #python and publicly available through an MIT License on GitHub: https://github.com/NeotomaDB/neotomabot'
   api.request('statuses/update', {'status':line})
-
-ukrsite(api)
 
 schedule.every(6).hours.do(recentsite, api)
 schedule.every(5).hours.do(randomtweet, api)
